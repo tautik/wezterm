@@ -180,7 +180,22 @@ hide:
     $ sudo dnf copr enable wezfurlong/wezterm-nightly
     $ sudo dnf install wezterm
     ```
-    
+
+    !!! note
+        On first install, dnf will prompt you to import the GPG key used to
+        sign the packages. Before answering `y`, verify that the displayed
+        fingerprint matches:
+
+        ```
+        FD90 9B62 88A8 4250 AD58 020F A698 91C5 CEA2 757D
+        ```
+
+        You can also fetch the public key directly and check it yourself:
+
+        ```console
+        $ curl -s https://download.copr.fedorainfracloud.org/results/wezfurlong/wezterm-nightly/pubkey.gpg | gpg --show-keys --with-fingerprint
+        ```
+
     ## Fedora Atomic Desktops (Silverblue, Kinoite) specific
 
     To perform initial installation:
